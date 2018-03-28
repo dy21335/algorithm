@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="a">
+    <counter></counter>
+    <counter></counter>
+</div>
+
+<template id="counter-template">
+    <div>
+    <h1>HEllow</h1>
+    <button @click="count+=1">submit {{count}}</button></div>
+</template>
+
+<div id="b">
+    <input v-model="parentMsg"></input>
+    <br>
+    <child v-bind:my-message="parentMsg"></child>
+</div>
+
+<div id="c">
+    <p>{{fatherCounter}}</p>
+    <button-counter v-on:increament="fatherIncreament"></button-counter>
+    <button-counter v-on:increament="fatherIncreament"></button-counter>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+<script type="text/javascript">
+    Vue.component('counter',{
+        data:function () {
+            return {
+                count:0
+            }
+        },
+        template:'#counter-template'
+    });
+    new Vue({
+        el:'#a'
+    });
+//*******************************
+    Vue.component('child',{
+        props:['myMessage'],
+        template:'<span>{{myMessage}}</span>'
+    });
+    new Vue({
+        el:'#b',
+        data:{
+            parentMsg:'i am a message from parent'
+        }
+    });
+
+
+//***************************************
+Vue.component('button-counter',{
+    template:'<button v-on:click="childcounterAdd">{{childCounter}}</button>',
+    data: function () {
+        return {
+            childCounter : 0
+        }
+    },
+    methods:{
+        childcounterAdd:function () {
+            this.childCounter++;
+            this.$emit('increament');
+        }
+    }
+});
+new Vue({
+    el:'#c',
+    data:{
+        fatherCounter:0
+    },
+    methods:{
+        fatherIncreament:function () {
+            this.fatherCounter++;
+        }
+    }
+})
+</script>
+</body>
+</html>

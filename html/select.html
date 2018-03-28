@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>body</title>
+    <style>
+        /* your code here */
+    </style>
+</head>
+<body>
+<div id="select"></div>
+
+<script>
+        function select(options) {
+            var $select = document.getElementById('select');
+            var data = options.data || [];
+            var innerstr = ''; //define select modal
+            innerstr += '<select id="test" style="width: 250px;">';
+            for (var i = 0, l = data.length; i < l; i++) {
+                innerstr += '<option value="' + data[i] + '" label="' + data[i] + '"/>';
+            }
+            innerstr += '<select>'
+            $select.innerHTML = innerstr;
+            var sl = document.getElementById("test");
+            sl["onchange"] = function(e) {
+                options.onChange(sl.options[sl.selectedIndex]);
+            };
+        }
+
+
+    select({
+        srcNode : '#select',
+        data : [ '北京', '上海', '杭州' ],
+        onChange : function(ev) {
+            console.log(ev.value);
+        }
+    });
+</script>
+</body>
+</html>
