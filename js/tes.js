@@ -222,24 +222,61 @@
 //
 //
 
-function obj(name) {
-  this.name = name;
+// function obj(name) {
+//   this.name = name;
+// }
+// var arr = [];
+// arr.push(new obj("abc"));
+// arr.push(new obj("aac"));
+// console.log(arr.sort(objSort));
+//
+//
+// function objSort(obj1,obj2) {
+//   if(obj1.name<obj2.name) return -1;
+//   if(obj1.name == obj2.name)  return 0;
+//   //
+//   // for(let i = 1,j = 0;i<obj1.name.length&&j<obj2.length;i++,j++){
+//   //   if(obj1.name[i] == obj2.name[i])
+//   // }
+//
+//   // }
+//   if(obj1.name > obj2.name) return 1;
+// };
+
+//
+// var d_arr = [];
+// var temp_arr = [];
+//
+//     for(let j = 0;j<4;j++){
+//         temp_arr[j] = 0;
+//     }
+//     for(let i = 0;i<4;i++){
+//         d_arr[i] = temp_arr;
+//
+//     }
+//
+//     console.log(d_arr);
+// var father = 0;
+//
+// for(let i = 0;i<4;i++){
+//     d_arr[i] = father;
+// }
+// d_arr[3]=4;
+// console.log(d_arr);
+
+// var d_arr = new Array();
+// for(let i = 0;i<4;i++){
+//   d_arr[i] = new Array();
+//   for(let j = 0;j<4;j++){
+//     d_arr[i][j] = 0;
+//   }
+// }
+//
+// console.log(d_arr);
+
+var temp = Infinity;
+if(4 < Infinity){
+  temp = 4;
+  console.log(temp);
 }
-var arr = [];
-arr.push(new obj("abc"));
-arr.push(new obj("aac"));
-console.log(arr.sort(objSort));
-
-
-function objSort(obj1,obj2) {
-  if(obj1.name<obj2.name) return -1;
-  if(obj1.name == obj2.name)  return 0;
-  //
-  // for(let i = 1,j = 0;i<obj1.name.length&&j<obj2.length;i++,j++){
-  //   if(obj1.name[i] == obj2.name[i])
-  // }
-
-  // }
-  if(obj1.name > obj2.name) return 1;
-};
 
