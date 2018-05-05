@@ -1,0 +1,39 @@
+// Given a string, find the length of the longest substring without repeating characters.
+//
+//     Examples:
+// Given "abcabcbb", the answer is "abc", which the length is 3.
+// Given "bbbbb", the answer is "b", with the length of 1.
+// Given "pwwkew", the answer is "wke", with the length of 3.
+// Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+/**
+ * @param {string} s
+ * @return {number}
+ */
+//遍历整个字符串，将第一个字符push到result数组中，子字符substirng的长度len变为1；
+//遍历到字符s[i]时，如果s[i]不在substring中时，++len；
+//否则，找到substring中与s[i]相同的那个字母在string中的索引index，i->index+1;
+//检查max值是否要改变；
+
+var lengthOfLongestSubstring = function(s) {
+    var len =0;
+    var max = 0;
+    var result = new Map();
+    for(let i = 0; i<s.length; ++i){
+         if(result.get(s[i]) != null){
+                max = len>max?len:max;
+                len = 0;
+                i = result.get(s[i]);
+                result.clear();
+         }
+         else {
+             result.set(s[i],i);
+             len++;
+         }
+    }
+    max = len>max?len:max;
+    return max;
+};
+
+console.log(lengthOfLongestSubstring('dvdf')); //3
+console.log(lengthOfLongestSubstring('bbbbb'));  //1
+console.log(lengthOfLongestSubstring('pwwkew'));  //3
