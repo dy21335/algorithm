@@ -1,0 +1,42 @@
+// Given a 32-bit signed integer, reverse digits of an integer.
+//
+//     Example 1:
+//
+// Input: 123
+// Output: 321
+// Example 2:
+//
+// Input: -123
+// Output: -321
+// Example 3:
+//
+// Input: 120
+// Output: 21
+
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var reverse = function(x) {
+    //环境限制为只能处理-2^31~2^31-1,所以如果反转超过了这个限制，那么就不会显示出正确的反转数；
+    var result,
+        tail,
+        temp;
+    result = 0;
+    while(x != 0){
+        tail = x % 10;
+        //关于负数的取模运算很有意思
+        temp = result*10 + tail;
+        if (temp > 2147483647 || temp < -2147483648){
+            return 0;
+        }
+        else{
+            result = temp;
+            x = parseInt(x / 10);
+        }
+    }
+    return result;
+};
+
+console.log(reverse(1534236469));
+console.log(Number('JLJ-32'));
