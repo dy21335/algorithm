@@ -1,0 +1,53 @@
+// Given a collection of numbers that might contain duplicates, return all possible unique permutations.
+//
+//     Example:
+//
+// Input: [1,1,2]
+// Output:
+//     [
+//         [1,1,2],
+//         [1,2,1],
+//         [2,1,1]
+//     ]
+
+var result,
+    temp,
+    totalLen;
+
+result = [];
+temp = [];
+
+var permuteUnique = function(nums) {
+    result = [];
+    totalLen = nums.length;
+    permutation(nums, nums.length, totalLen);
+    return result;
+};
+
+
+
+function permutation(arr, len, totallen) {
+
+    if(len == 1){
+        temp.push(arr[0]);
+        result.push(temp.slice());
+        // console.log(result);
+        temp.pop();
+    }
+
+    var obj = {};
+    //主要在于每一次for循环前，判断这个arr[i]是否已经用过了；
+
+    for(let i = 0; i < len; ++i){
+
+        if(obj[arr[i]] !== undefined){
+            continue;
+        }
+        else {
+            obj[arr[i]] = 1;
+        }
+        temp.push(arr[i]);
+        permutation((arr.slice(0,i)?arr.slice(0,i):[]).concat(arr.slice(i+1)), len-1, totallen);
+        temp.pop();
+    }
+}

@@ -1,0 +1,78 @@
+// The set [1,2,3,...,n] contains a total of n! unique permutations.
+//
+//     By listing and labeling all of the permutations in order, we get the following sequence for n = 3:
+//
+// "123"
+// "132"
+// "213"
+// "231"
+// "312"
+// "321"
+// Given n and k, return the kth permutation sequence.
+//
+//     Note:
+//
+// Given n will be between 1 and 9 inclusive.
+//     Given k will be between 1 and n! inclusive.
+//     Example 1:
+//
+// Input: n = 3, k = 3
+// Output: "213"
+// Example 2:
+//
+// Input: n = 4, k = 9
+// Output: "2314"
+
+/**
+ * @param {number} n
+ * @param {number} k
+ * @return {string}
+ */
+
+var result,
+    temp,
+    count;
+
+result = [];
+temp = [];
+count = 0;
+
+var getPermutation = function(n,k) {
+    var nums = [];
+    for(let i =0; i<n; ++i){
+        nums[i] = i+1;
+    }
+    //一定要对变量初始化，因为leetcode多次调用这个函数的时候，如果不重新初始化；
+    //每组测试数据可能使用的是上次的内容；
+    count = 0;
+    result = [];
+    permutation(nums, nums.length, k);
+    return result[0].join('');
+};
+
+
+
+function permutation(arr, len, k) {
+    if(len == 1){
+        count ++;
+        temp.push(arr[0]);
+        if(count == k){
+            result.push(temp.slice());
+        }
+        // result.push(temp.slice());
+        // console.log(result);
+        temp.pop();
+    }
+
+
+    for(let i = 0; i < len; ++i){
+        if(count == k){
+            break
+        }
+        temp.push(arr[i]);
+        permutation((arr.slice(0,i)?arr.slice(0,i):[]).concat(arr.slice(i+1)), len-1, k);
+        temp.pop();
+    }
+}
+
+console.log(getPermutation(3,1));

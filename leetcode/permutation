@@ -14,12 +14,17 @@
 //     ]
 
 var result,
-    temp;
-
+    temp,
+    totalLen;
+//result记录所有排列方式的结果数组；
+//temp为当前求的排列方式；
+//totalLen为原来数组的长度；
     result = [];
     temp = [];
 
 var permute = function(nums) {
+    result = [];
+    totalLen = nums.length;
     permutation(nums, nums.length);
     return result;
 };
@@ -33,6 +38,9 @@ function permutation(arr, len) {
         // console.log(result);
         temp.pop();
     }
+
+
+
     for(let i = 0; i < len; ++i){
         temp.push(arr[i]);
         permutation((arr.slice(0,i)?arr.slice(0,i):[]).concat(arr.slice(i+1)), len-1);
@@ -40,4 +48,4 @@ function permutation(arr, len) {
     }
 }
 
-console.log(permute([1]));
+console.log(permute([1,2,3]));
