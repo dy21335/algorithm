@@ -20,11 +20,11 @@ var findMedianSortedArrays = function(nums1, nums2) {
     len2 = nums2.length;
     totalLen = len1 + len2;
     if(totalLen & 1){
-        return findTopK(nums1, 0, len1-1, nums2, 0, len2-1,parseInt(totalLen/2));
+        return findTopK(nums1, 0, len1-1, nums2, 0, len2-1, parseInt(totalLen/2));
     }
     else {
-        var firstNum = findTopK(nums1, 0, len1-1, nums2, 0, len2-1,parseInt(totalLen/2)-1);
-        var secondNum = findTopK(nums1, 0, len1-1, nums2, 0, len2-1,parseInt(totalLen/2));
+        var firstNum = findTopK(nums1, 0, len1-1, nums2, 0, len2-1, parseInt(totalLen/2)-1);
+        var secondNum = findTopK(nums1, 0, len1-1, nums2, 0, len2-1, parseInt(totalLen/2));
         return (firstNum+secondNum)/2;
     }
 
