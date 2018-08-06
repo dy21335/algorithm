@@ -274,9 +274,15 @@
 //
 // console.log(d_arr);
 
-var temp = Infinity;
-if(4 < Infinity){
-  temp = 4;
-  console.log(temp);
-}
+// var temp = Infinity;
+// if(4 < Infinity){
+//   temp = 4;
+//   console.log(temp);
+// }
 
+function test(){
+  console.log("hi");
+}
+test.Id = 1;
+
+console.log(Object.prototype.toString(test));
