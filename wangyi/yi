@@ -1,6 +1,6 @@
-var str = ['A','B','C'],
-    result = [],
+var result = [],
     count=0;
+var res = 0;
 /*参数arr为待全排的数组,len为待全排数组的长度，index为result数组已经排序到第几位*/
 function permutation(arr,len,index) {
     //思想就是，首先，遍历数组的每一位，设为a，把a固定为第一位，求剩下数组的元素的全排列；
@@ -9,8 +9,7 @@ function permutation(arr,len,index) {
     if(len==1){
         result.push(arr[0]);
         // count++;
-        console.log(result);
-        return;
+        res = res > (parseInt(result[0])+parseInt(result[1]))*parseInt(result[2])? res:(parseInt(result[0])+parseInt(result[1]))*parseInt(result[2]);
     }
     else{
         for(let i = 0;i<len;i++){
@@ -19,5 +18,7 @@ function permutation(arr,len,index) {
             result=result.slice(0,index)?result.slice(0,index):[];
         }
     }
+    return res
 }
-permutation(str,str.length,0);
+
+console.log(permutation(['1','2','3'], 3, 0))
