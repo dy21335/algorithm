@@ -48,38 +48,6 @@ function Dictionary() {
     };
 }
 
-function Queue() {
-    var items = [];
-    // 向队列尾部添加一个（或多个）新的项
-    this.enqueue = function(element){
-        items.push(element);
-    };
-    // 移除队列的第一（即排在队列最前面的）项，并返回被移除的元素
-    this.dequeue = function(){
-        return items.shift();
-    };
-    // 返回队列中第一个元素——最先被添加，也将是最先被移除的元素。队列不做任何变动
-    this.front = function(){
-        return items[0];
-    };
-    // 如果队列中不包含任何元素，返回 true ，否则返回 false
-    this.isEmpty = function(){
-        return items.length == 0;
-    };
-    //  清空队列
-    this.clear = function(){
-        items = [];
-    };
-    // 返回队列包含的元素个数，与数组的 length 属性类似
-    this.size = function(){
-        return items.length;
-    };
-    this.print = function(){
-        console.log(items.toString());
-    };
-}
-
-
 //只适合于无向图
 
 function Graph(){
@@ -107,37 +75,16 @@ Graph.prototype.initializeColor = function(){
     return color;
 }
 
-Graph.prototype.bfs = function(v, callback){
-    var res = [];//结果数组
-    var color = this.initializeColor();
-    var queue = new Queue();
-    queue.enqueue(v);
-    res.push(v);
-    while(!queue.isEmpty()){
-        var u = queue.dequeue(),
-            neighbors = this.adjList.get(u);
-        color[u] = 'grey';
-        for(let i = 0; i < neighbors.length; i++){
-            var w = neighbors[i];
-            if(color[w] === 'white'){
-                color[w] = 'grey';
-                queue.enqueue(w);
-                res.push(w);
-            }
-        }
-        color[u] = 'black';
-        callback && callback(u);
-    }
-    return res;
-}
+
 
 Graph.prototype.dfs = function(callback){
-    var res = [];
+    var res = 0;
     var _this = this;
     var color = this.initializeColor();
     for(let i = 0; i < this.vertices.length; ++i){
         if(color[this.vertices[i]] === 'white'){
-            res.push(this.vertices[i]);
+            console.log("first white:", this.vertices[i]);
+            res++;
             dfsVisit(this.vertices[i], color, callback);
         }
     }
@@ -148,7 +95,6 @@ Graph.prototype.dfs = function(callback){
         for(let i = 0; i<neighbors.length; ++i){
             let w = neighbors[i];
             if(color[w] === 'white'){
-                res.push(w);
                 dfsVisit(w, color, callback);
             }
         }
@@ -158,15 +104,66 @@ Graph.prototype.dfs = function(callback){
 }
 
 
-graph.addEdge('A', 'D');
-graph.addEdge('A', 'B');
-graph.addEdge('B', 'E');
-graph.addEdge('B', 'C');
-graph.addEdge('E', 'F');
-graph.addEdge('E', 'C');
-graph.addEdge('C', 'F');
-// console.log(graph.adjList.get('A'));
 
+var readline = require('readline')
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
+
+// 获取三行输入的值，输出它们的和
+var countLine = 0;
+var lines = 0;
+var tokens = [];
+var len = 0;
+var graphDfs;
+var teamNum = 0;
+rl.on('line', function(line) {
+    if(countLine == 0){
+        countLine = parseInt(line)
+        len = countLine;
+    }else {
+        //将数组转成字符数组
+        tokens.push(line.split(" "))
+        // console.log("line.split", line);
+        if (--countLine == 0){
+            graphDfs  = initGraph(tokens, len)
+            teamNum = graphDfs.dfs();
+            console.log("res", teamNum);
+            tokens = [];
+            len = 0;
+            teamNum = 0;
+            // team(tokens);
+        }
+    }
+})
+
+// 本题为考试多行输入输出规范示例，无需提交，不计分。
+// var n = parseInt(readline());
+// var tokens = [];
+// for(var i = 0;i < n; i++){
+//     lines = readline().split(" ")
+//     tokens.push(lines.slice());
+// }
+
+function initGraph(tokens, len) {
+    graph = new Graph();
+    for (i = 0; i < len; ++i){
+        console.log("here",i)
+        graph.addVertex(i);
+    }
+    console.log(tokens)
+    tokens.forEach((value, index) => {
+        for(let i = 0; i < value.length - 1; ++i){
+            // console.log("aha")
+            console.log("in, value[i]",index, parseInt(value[i])-1)
+            graph.addEdge(index, parseInt(value[i])-1);
+        }
+        // console.log("graphadjext", graph.adjList.get([value]));
+    })
+    return graph
+}
 
 
 
