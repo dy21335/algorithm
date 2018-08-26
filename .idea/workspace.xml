@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17a7f655-6967-4e2f-891f-20287e11d2b9" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/leetcode/KthLargestElementinanArray.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/字节跳动/合法的表达式.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/字节跳动/字节跳动大闯关.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/leetcode/TopKFrequentElements.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/js/Graph.js" afterPath="$PROJECT_DIR$/js/Graph.js" />
-      <change beforePath="$PROJECT_DIR$/js/kmultiLine.js" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,31 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="字节跳动大闯关.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/字节跳动/字节跳动大闯关.js">
+      <file leaf-file-name="TopKFrequentElements.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leetcode/TopKFrequentElements.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="139" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="合法的表达式.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/字节跳动/合法的表达式.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KthLargestElementinanArray.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/leetcode/KthLargestElementinanArray.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="55" selection-end-column="2" />
+            <state relative-caret-position="315">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -53,32 +29,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Graph.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/Graph.js">
+      <file leaf-file-name="arrsort.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/arrsort.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+            <state relative-caret-position="-332">
+              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kmulti" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wangyi/kmulti">
+      <file leaf-file-name="tes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/tes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="quicksort.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/quicksort.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="-3397">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,6 +79,7 @@
         <option value="$PROJECT_DIR$/字节跳动/合法的表达式.js" />
         <option value="$PROJECT_DIR$/leetcode/KthLargestElementinanArray .js" />
         <option value="$PROJECT_DIR$/leetcode/KthLargestElementinanArray.js" />
+        <option value="$PROJECT_DIR$/leetcode/TopKFrequentElements.js" />
       </list>
     </option>
   </component>
@@ -207,28 +176,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.KthLargestElementinanArray .js">
+  <component name="RunManager" selected="Node.js.TopKFrequentElements.js">
     <configuration name="KthLargestElementinanArray .js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="$PROJECT_DIR$/leetcode/KthLargestElementinanArray.js" working-dir="$PROJECT_DIR$/leetcode" />
     <configuration name="LongestWordinDictionarythroughDeleting.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="LongestWordinDictionarythroughDeleting.js" working-dir="$PROJECT_DIR$/leetcode" />
     <configuration name="MergeSortedArray.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="MergeSortedArray.js" working-dir="$PROJECT_DIR$/leetcode" />
+    <configuration name="TopKFrequentElements.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="TopKFrequentElements.js" working-dir="$PROJECT_DIR$/leetcode" />
     <configuration name="Unnamed" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="ValidPalindromeII.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="ValidPalindromeII.js" working-dir="$PROJECT_DIR$/leetcode" />
     <configuration name="字节跳动大闯关.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="字节跳动大闯关.js" working-dir="$PROJECT_DIR$/字节跳动" />
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Node.js.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.ValidPalindromeII.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.MergeSortedArray.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.LongestWordinDictionarythroughDeleting.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.字节跳动大闯关.js" />
-      <item index="5" class="java.lang.String" itemvalue="Node.js.KthLargestElementinanArray .js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.MergeSortedArray.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.LongestWordinDictionarythroughDeleting.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.字节跳动大闯关.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.KthLargestElementinanArray .js" />
+      <item index="5" class="java.lang.String" itemvalue="Node.js.TopKFrequentElements.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.KthLargestElementinanArray .js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.字节跳动大闯关.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.LongestWordinDictionarythroughDeleting.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.MergeSortedArray.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.ValidPalindromeII.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.TopKFrequentElements.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.KthLargestElementinanArray .js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.字节跳动大闯关.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.LongestWordinDictionarythroughDeleting.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.MergeSortedArray.js" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +216,7 @@
       <updated>1533957917770</updated>
       <workItem from="1533957919268" duration="1506000" />
       <workItem from="1533961147367" duration="7171000" />
-      <workItem from="1535038605200" duration="21441000" />
+      <workItem from="1535038605200" duration="29507000" />
     </task>
     <task id="LOCAL-00001" summary="amend">
       <created>1533980397710</created>
@@ -263,14 +232,22 @@
       <option name="project" value="LOCAL" />
       <updated>1535131329767</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="KthLargestElementinanArray">
+      <created>1535206872998</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1535206872998</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30118000" />
+    <option name="totallyTimeSpent" value="38184000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -301,7 +278,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="amend" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="KthLargestElementinanArray" />
+    <option name="LAST_COMMIT_MESSAGE" value="KthLargestElementinanArray" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -415,6 +393,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -422,6 +403,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -452,13 +434,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/arrsort.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -584,19 +562,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/字节跳动/字节跳动大闯关.js">
+    <entry file="file://$PROJECT_DIR$/js/kmultiLine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="139" selection-end-column="2" />
+        <state relative-caret-position="645">
+          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Graph.js">
+    <entry file="file://$PROJECT_DIR$/leetcode/KthLargestElementinanArray.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="182">
+          <caret line="43" column="1" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="43" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -608,18 +588,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/kmultiLine.js">
+    <entry file="file://$PROJECT_DIR$/字节跳动/字节跳动大闯关.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/quicksort.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="133">
+          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="139" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -632,10 +604,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leetcode/KthLargestElementinanArray.js">
+    <entry file="file://$PROJECT_DIR$/js/quicksort.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="55" selection-end-column="2" />
+        <state relative-caret-position="308">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="165" column="24" lean-forward="true" selection-start-line="165" selection-start-column="24" selection-end-line="165" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/arrsort.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-332">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/tes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3397">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetcode/TopKFrequentElements.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
