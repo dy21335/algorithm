@@ -22,5 +22,50 @@
 
 //利用三路快排
 var sortColors = function(nums) {
+    var pivot, //要比较的值
+        temp,  //存储nums第一个值
+        l,          //游标
+        ltag,     //< pivot序列的结束位置
+        eEnd,       //相等序列的结束位置
+        htag;       //大于pivot的元素的开始位置
 
+    pivot = 1;
+    temp = nums[0];
+    nums[0] = pivot;
+    l = 1;
+    ltag = -1;
+    eEnd = 0;
+    htag = nums.length;
+    // console.log(nums)
+
+    while (l < htag){
+        if(nums[l] < pivot){
+            //eEnd紧挨着相等序列
+            swap(nums, ++ltag, l);
+            l++;
+            // console.log("<",nums)
+        }else if(nums[l] == pivot){
+            ++eEnd;
+            ++l;
+        }else if(nums[l] > pivot){
+            swap(nums, --htag, l)
+            // console.log(">",nums)
+        }
+    }
+    if(temp >= pivot){
+        nums[l-1] = temp;
+    }else if(temp < pivot){
+        nums[ltag+1] = temp;
+    }
+    return nums
 };
+
+function swap(arr, a, b) {
+    var temp;
+    temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+}
+
+console.log(sortColors([2,0,2,1,1,0]))
+console.log(sortColors([2,1,1,0,2,1,0]))
