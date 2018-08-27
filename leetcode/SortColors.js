@@ -24,38 +24,37 @@
 var sortColors = function(nums) {
     var pivot, //要比较的值
         temp,  //存储nums第一个值
+
         l,          //游标
-        ltag,     //< pivot序列的结束位置
-        eEnd,       //相等序列的结束位置
-        htag;       //大于pivot的元素的开始位置
+        lt,         // < pivot序列的结束位置
+        ht;       //大于pivot的元素的开始位置
 
     pivot = 1;
     temp = nums[0];
     nums[0] = pivot;
+
     l = 1;
-    ltag = -1;
-    eEnd = 0;
-    htag = nums.length;
+    lt = -1;
+    ht = nums.length;
     // console.log(nums)
 
-    while (l < htag){
+    while (l < ht){
         if(nums[l] < pivot){
             //eEnd紧挨着相等序列
-            swap(nums, ++ltag, l);
+            swap(nums, ++lt, l);
             l++;
             // console.log("<",nums)
         }else if(nums[l] == pivot){
-            ++eEnd;
             ++l;
         }else if(nums[l] > pivot){
-            swap(nums, --htag, l)
+            swap(nums, --ht, l)
             // console.log(">",nums)
         }
     }
     if(temp >= pivot){
-        nums[l-1] = temp;
+        nums[ht-1] = temp;
     }else if(temp < pivot){
-        nums[ltag+1] = temp;
+        nums[lt+1] = temp;
     }
     return nums
 };
@@ -67,5 +66,5 @@ function swap(arr, a, b) {
     arr[b] = temp;
 }
 
-console.log(sortColors([2,0,2,1,1,0]))
-console.log(sortColors([2,1,1,0,2,1,0]))
+
+console.log(sortColors([2,0,2,1,1,0])) //[ 0, 0, 1, 1, 2, 2 ]
