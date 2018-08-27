@@ -21,11 +21,11 @@ function quickSort(arr,low,high) {
     index = low;
     while(true){
         while(arr[--high]>pivot){
-            if(high == low) break;
+            if(high < low) break;
         }
 
         while(arr[++low] < pivot){
-            if(high == low) break;
+            if(high < low) break;
             }
         if(low>=high) break;
         swap(arr,low,high);
@@ -35,5 +35,8 @@ function quickSort(arr,low,high) {
     return high;
 }
 
+var arr2 = [1];
 multiquickSort(arr,0,arr.length-1);
+multiquickSort(arr2,0,arr2.length-1);
 console.log(arr);
+console.log(arr2);
